@@ -7,7 +7,7 @@ public class Paddle : MonoBehaviour
     public float targetPosition = 75;
     public float originPosition = 0;
 
-    public HingeJoint hingeJoint;
+    public new HingeJoint hingeJoint;
 
     private JointSpring jointSpring;
 
