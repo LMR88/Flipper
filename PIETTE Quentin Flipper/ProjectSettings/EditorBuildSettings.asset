@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: b1c167e0f3902fc48be4ffb9ccacf28c
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Jeu Flipper.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Pause.unity
+    guid: 6e7ba8fb452fc004a86c774d6fae16fe
   m_configObjects: {}

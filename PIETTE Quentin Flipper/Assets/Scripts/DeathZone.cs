@@ -7,6 +7,9 @@ public class DeathZone : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     { 
+        Physics.gravity = new Vector3(0, -9.81f, 0);
       Destroy(other.gameObject);
+      
+      GameManager.instance.LoseBall();
     }
 }
