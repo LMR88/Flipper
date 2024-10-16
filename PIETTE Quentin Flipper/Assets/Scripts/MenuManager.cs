@@ -41,9 +41,9 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene(scene.name);
     }
 
-    public void ButtonQuit()
+    public void ButtonMenu()
     {
-        Application.Quit(0);
+        SceneManager.LoadScene(0);
     }
 
 }

@@ -19,6 +19,7 @@ public class MainMenuFlipper : MonoBehaviour
     
     public void PlayButton()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(1);
     }
 
