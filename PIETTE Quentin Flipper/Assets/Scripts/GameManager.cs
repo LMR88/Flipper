@@ -2,18 +2,21 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public int ballCount;
 
-    [SerializeField] private int lifeCount = 3;
+    [SerializeField] public int lifeCount = 3;
 
     public static GameManager instance;
 
     [SerializeField] public GameObject ballPrefab;
 
     [SerializeField] private Transform spawnTransform;
+
+    public GameObject gameOverScreen;
 
      void Awake()
     {
@@ -31,7 +34,7 @@ public class GameManager : MonoBehaviour
 
         if (lifeCount == 0)
         {
-            Debug.Log("Game Over");
+            gameOverScreen.SetActive(true);
         }
         else
         {

@@ -38,7 +38,7 @@ public class MenuManager : MonoBehaviour
     public void ReloadScene()
     {
         Scene scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(scene.name);
+        SceneManager.LoadScene(1);
     }
 
     public void ButtonMenu()
