@@ -3802,6 +3802,12 @@ Transform:
   - {fileID: 318387060}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &710593177 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4313199168673797278, guid: ac6340b865c27d04db2c4edd5d552f63,
+    type: 3}
+  m_PrefabInstance: {fileID: 1544117430}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &735426840
 GameObject:
   m_ObjectHideFlags: 0
@@ -7130,11 +7136,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4313199168673797278, guid: ac6340b865c27d04db2c4edd5d552f63,
+        type: 3}
+      propertyPath: m_Name
+      value: Menu Pause
+      objectReference: {fileID: 0}
+    - target: {fileID: 4313199168673797278, guid: ac6340b865c27d04db2c4edd5d552f63,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5966521921076183797, guid: ac6340b865c27d04db2c4edd5d552f63,
         type: 3}
       propertyPath: m_Name
       value: MenuManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7601467527795172801, guid: ac6340b865c27d04db2c4edd5d552f63,
+        type: 3}
+      propertyPath: menu
+      value: 
+      objectReference: {fileID: 710593177}
     - target: {fileID: 9045934158639394314, guid: ac6340b865c27d04db2c4edd5d552f63,
         type: 3}
       propertyPath: m_IsActive
