@@ -11,5 +11,6 @@ public class DeathZone : MonoBehaviour
       Destroy(other.gameObject);
       
       GameManager.instance.LoseBall();
+      BallControl.instance.LookPlayer1();
     }
 }

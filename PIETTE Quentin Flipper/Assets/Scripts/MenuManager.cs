@@ -9,6 +9,11 @@ public class MenuManager : MonoBehaviour
     [SerializeField] GameObject menu;
     [SerializeField] bool menuOpen;
 
+    private void Start()
+    {
+        Time.timeScale = 1;
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -39,6 +44,7 @@ public class MenuManager : MonoBehaviour
     {
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(1);
+        Physics.gravity = new Vector3(0, -9.8f, 0);
     }
 
     public void ButtonMenu()
