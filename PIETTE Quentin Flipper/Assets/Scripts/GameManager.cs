@@ -18,6 +18,12 @@ public class GameManager : MonoBehaviour
 
     public GameObject gameOverScreen;
 
+    [SerializeField] private GameObject Heart1;
+    
+    [SerializeField] private GameObject Heart2;
+    
+    [SerializeField] private GameObject Heart3;
+
      void Awake()
     {
         instance = this;
@@ -35,9 +41,16 @@ public class GameManager : MonoBehaviour
         if (lifeCount == 0)
         {
             gameOverScreen.SetActive(true);
+            Heart1.SetActive(false);
         }
-        else
+        else if (lifeCount == 2)
         {
+            Heart3.SetActive(false);
+            SpawnBall();
+        }
+        else if (lifeCount == 1)
+        {
+            Heart2.SetActive(false);
             SpawnBall();
         }
     }
