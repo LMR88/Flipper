@@ -23,6 +23,16 @@ public class MainMenuFlipper : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void SettingsButton()
+    {
+        SceneManager.LoadScene(4);
+    }
+
+    public void MenuButton()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     public void QuitButton()
     {
         Application.Quit();
