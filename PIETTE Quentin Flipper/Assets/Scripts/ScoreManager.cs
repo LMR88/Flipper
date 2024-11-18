@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
@@ -22,6 +23,10 @@ public class ScoreManager : MonoBehaviour
 
     public bool player1Targeted;
 
+    [SerializeField] public GameObject Player1Win;
+    
+    [SerializeField] public GameObject Player2Win;
+
     private void Awake()
     {
         instance = this;
@@ -40,6 +45,17 @@ public class ScoreManager : MonoBehaviour
             TextRefresh();
         }
 
+        if (score > score2)
+        {
+            Player1Win.SetActive(true);
+            Player2Win.SetActive(false);
+        }
+        else
+        {
+            Player2Win.SetActive(true);
+            Player1Win.SetActive(false);
+        }
+
 
     }
 
@@ -54,4 +70,5 @@ public class ScoreManager : MonoBehaviour
         scoreText2.text = "Joueur 2 score : " + score2.ToString();
         scoreoverText2.text = "Joueur 2 score : " + score2.ToString();
     }
+    
 }

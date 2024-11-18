@@ -25,6 +25,7 @@ public class MenuManager : MonoBehaviour
 
     public void OpenCloseMenu()
     {
+        Debug.Log("aaa");
         menuOpen = !menuOpen;
         
         menu.SetActive(menuOpen);
@@ -43,7 +44,7 @@ public class MenuManager : MonoBehaviour
     public void ReloadScene()
     {
         Scene scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(scene.name);
         Physics.gravity = new Vector3(0, -9.8f, 0);
     }
 
