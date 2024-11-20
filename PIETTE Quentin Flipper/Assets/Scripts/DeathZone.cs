@@ -12,5 +12,7 @@ public class DeathZone : MonoBehaviour
       
       GameManager.instance.LoseBall();
       BallControl.instance.LookPlayer1();
+      
+      ScoreManager.instance.AddPoints(-50);
     }
 }

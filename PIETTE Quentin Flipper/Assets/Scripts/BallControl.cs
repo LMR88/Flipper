@@ -17,6 +17,11 @@ public class BallControl : MonoBehaviour
     public float rotationSpeed;
     public Transform transformParent;
     public bool points;
+    public CanMove obstacle1;
+    public CanMove obstacle2;
+    public GameObject heartPlayer1;
+    public GameObject heartPlayer2;
+    
 
     void Start()
     {
@@ -61,10 +66,18 @@ public class BallControl : MonoBehaviour
             if (isPlayer1Perspective)
             {
                 LookPlayer2();
+                obstacle2.canMove = true;
+                obstacle1.canMove = false;
+                heartPlayer1.SetActive(false);
+                heartPlayer2.SetActive(true);
             }
             else
             {
                 LookPlayer1();
+                obstacle2.canMove = false;
+                obstacle1.canMove = true;
+                heartPlayer1.SetActive(true);
+                heartPlayer2.SetActive(false);
             }
         } 
     }
@@ -82,7 +95,7 @@ public class BallControl : MonoBehaviour
         ballPrefabRigidbody.useGravity = true;
         isPlayer1Perspective = true;
         //ballRigidbody.velocity = Vector3.zero;
-        Physics.gravity = new Vector3(0, -9.8f, 0);
+        Physics.gravity = new Vector3(0, -9.8f, 9.8f);
     }
 
     public void LookPlayer2()
@@ -97,7 +110,7 @@ public class BallControl : MonoBehaviour
         ballPrefabRigidbody.useGravity = true;
         isPlayer1Perspective = false;
         //ballRigidbody.velocity = Vector3.zero;
-        Physics.gravity = new Vector3(0, 9.8f, 0);
+        Physics.gravity = new Vector3(0, 9.8f, 9.8f);
     }
 
     IEnumerator WaitBeforeAllowToChangeAgain()

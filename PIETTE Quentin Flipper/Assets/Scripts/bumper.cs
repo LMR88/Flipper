@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bumper : MonoBehaviour
+public class Bumper : MonoBehaviour
 {
    public float strength = 1;
    public Animation anim;
