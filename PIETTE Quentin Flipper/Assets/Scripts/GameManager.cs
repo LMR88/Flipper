@@ -93,6 +93,7 @@ public class GameManager : MonoBehaviour
     
     void SpawnBall()
     {
-        Instantiate(ballPrefab, spawnTransform.position, Quaternion.identity,transform);
+        GameObject newBille = Instantiate(ballPrefab, spawnTransform.position, Quaternion.identity,transform);
+        newBille.GetComponent<Ball>().randomInitialVelocity();
     }
 }

@@ -95,7 +95,7 @@ public class BallControl : MonoBehaviour
         ballPrefabRigidbody.useGravity = true;
         isPlayer1Perspective = true;
         //ballRigidbody.velocity = Vector3.zero;
-        Physics.gravity = new Vector3(0, -9.8f, 9.8f);
+        Physics.gravity = new Vector3(0, -9.8f, 0);
     }
 
     public void LookPlayer2()
@@ -110,7 +110,7 @@ public class BallControl : MonoBehaviour
         ballPrefabRigidbody.useGravity = true;
         isPlayer1Perspective = false;
         //ballRigidbody.velocity = Vector3.zero;
-        Physics.gravity = new Vector3(0, 9.8f, 9.8f);
+        Physics.gravity = new Vector3(0, 9.8f, 0);
     }
 
     IEnumerator WaitBeforeAllowToChangeAgain()
