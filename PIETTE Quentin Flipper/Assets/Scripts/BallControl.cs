@@ -68,6 +68,8 @@ public class BallControl : MonoBehaviour
                 LookPlayer2();
                 obstacle2.canMove = true;
                 obstacle1.canMove = false;
+                obstacle1.GetComponent<Rigidbody>().isKinematic = true;
+                obstacle2.GetComponent<Rigidbody>().isKinematic = false;
                 heartPlayer1.SetActive(false);
                 heartPlayer2.SetActive(true);
             }
@@ -76,6 +78,8 @@ public class BallControl : MonoBehaviour
                 LookPlayer1();
                 obstacle2.canMove = false;
                 obstacle1.canMove = true;
+                obstacle1.GetComponent<Rigidbody>().isKinematic = false;
+                obstacle2.GetComponent<Rigidbody>().isKinematic = true;
                 heartPlayer1.SetActive(true);
                 heartPlayer2.SetActive(false);
             }

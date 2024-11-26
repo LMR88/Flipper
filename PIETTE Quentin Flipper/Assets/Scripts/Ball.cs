@@ -22,7 +22,7 @@ public class Ball : MonoBehaviour
         }
         else
         {
-            GetComponent<Rigidbody>().AddForce(new Vector3(rand,1.2f,0),ForceMode.Impulse);
+            GetComponent<Rigidbody>().AddForce(new Vector3(rand,1.1f,0),ForceMode.Impulse);
         }
     }
     
