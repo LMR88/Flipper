@@ -8,7 +8,6 @@ public class Paddle : MonoBehaviour
     public float originPosition = 0;
 
     public new HingeJoint hingeJoint;
-
     private JointSpring jointSpring;
 
     public KeyCode key;

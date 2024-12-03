@@ -20,12 +20,10 @@ public class MenuManager : MonoBehaviour
         {
             OpenCloseMenu();
         }
-        
     }
 
     public void OpenCloseMenu()
     {
-        Debug.Log("aaa");
         menuOpen = !menuOpen;
         
         menu.SetActive(menuOpen);

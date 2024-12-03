@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class BallControl : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class BallControl : MonoBehaviour
     public GameObject ballPrefab;
     private bool isPlayer1Perspective = true; // Commence avec la caméra du joueur 1
     private bool canChangeSide = true;
-    public TMP_Text Joueur;
+    [FormerlySerializedAs("Joueur")] public TMP_Text joueur;
     public static BallControl instance;
     public bool player1Targeted = true;
     public float rotationSpeed;
@@ -25,7 +26,7 @@ public class BallControl : MonoBehaviour
 
     void Start()
     {
-        Joueur.text = "Joueur 1";
+        joueur.text = "Joueur 1";
         
         ballPrefabRigidbody.useGravity = true;
     }
@@ -93,7 +94,7 @@ public class BallControl : MonoBehaviour
 
         ScoreManager.instance.player1Targeted = true;
        
-        Joueur.text = "Joueur 1";
+        joueur.text = "Joueur 1";
 
         // Désactiver la gravité car nous sommes du côté du joueur 1
         ballPrefabRigidbody.useGravity = true;
@@ -108,7 +109,7 @@ public class BallControl : MonoBehaviour
 
         ScoreManager.instance.player1Targeted = false;
         
-        Joueur.text = "Joueur 2";
+        joueur.text = "Joueur 2";
 
         // Activer la gravité car nous sommes du côté du joueur 2
         ballPrefabRigidbody.useGravity = true;

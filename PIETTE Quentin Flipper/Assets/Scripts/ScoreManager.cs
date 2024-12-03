@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -11,9 +12,9 @@ public class ScoreManager : MonoBehaviour
 
     [SerializeField] public TMP_Text scoreText2;
     
-    [SerializeField] public TMP_Text scoreoverText;
+    [FormerlySerializedAs("scoreoverText")] [SerializeField] public TMP_Text scoreOverText;
 
-    [SerializeField] public TMP_Text scoreoverText2;
+    [FormerlySerializedAs("scoreoverText2")] [SerializeField] public TMP_Text scoreOverText2;
 
     [SerializeField] public int score;
 
@@ -23,9 +24,9 @@ public class ScoreManager : MonoBehaviour
 
     public bool player1Targeted;
 
-    [SerializeField] public GameObject Player1Win;
+    [FormerlySerializedAs("Player1Win")] [SerializeField] public GameObject player1Win;
     
-    [SerializeField] public GameObject Player2Win;
+    [FormerlySerializedAs("Player2Win")] [SerializeField] public GameObject player2Win;
 
     private void Awake()
     {
@@ -47,13 +48,13 @@ public class ScoreManager : MonoBehaviour
 
         if (score > score2)
         {
-            Player1Win.SetActive(true);
-            Player2Win.SetActive(false);
+            player1Win.SetActive(true);
+            player2Win.SetActive(false);
         }
         else
         {
-            Player2Win.SetActive(true);
-            Player1Win.SetActive(false);
+            player2Win.SetActive(true);
+            player1Win.SetActive(false);
         }
 
 
@@ -62,13 +63,13 @@ public class ScoreManager : MonoBehaviour
     public void RefreshText()
     {
         scoreText.text = "Joueur 1 score : " + score.ToString();
-        scoreoverText.text = "Joueur 1 score : " + score.ToString();
+        scoreOverText.text = "Joueur 1 score : " + score.ToString();
     }
 
     public void TextRefresh()
     {
         scoreText2.text = "Joueur 2 score : " + score2.ToString();
-        scoreoverText2.text = "Joueur 2 score : " + score2.ToString();
+        scoreOverText2.text = "Joueur 2 score : " + score2.ToString();
     }
     
 }

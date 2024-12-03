@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 
@@ -11,7 +12,6 @@ public class GameManager : MonoBehaviour
     public int ballCount;
 
     [SerializeField] public int lifeCount = 3;
-    
     [SerializeField] public int lifeCountInverse = 3;
 
     public static GameManager instance;
@@ -22,17 +22,17 @@ public class GameManager : MonoBehaviour
 
     public GameObject gameOverScreen;
 
-    [SerializeField] private GameObject Heart1;
+    [FormerlySerializedAs("Heart1")] [SerializeField] private GameObject heart1;
     
-    [SerializeField] private GameObject Heart2;
+    [FormerlySerializedAs("Heart2")] [SerializeField] private GameObject heart2;
     
-    [SerializeField] private GameObject Heart3;
+    [FormerlySerializedAs("Heart3")] [SerializeField] private GameObject heart3;
     
-    [SerializeField] private GameObject Heart4;
+    [FormerlySerializedAs("Heart4")] [SerializeField] private GameObject heart4;
     
-    [SerializeField] private GameObject Heart5;
+    [FormerlySerializedAs("Heart5")] [SerializeField] private GameObject heart5;
 
-    [SerializeField] private GameObject Heart6;
+    [FormerlySerializedAs("Heart6")] [SerializeField] private GameObject heart6;
 
      void Awake()
     {
@@ -51,16 +51,16 @@ public class GameManager : MonoBehaviour
         if (lifeCount == 0)
         {
             gameOverScreen.SetActive(true);
-            Heart1.SetActive(false);
+            heart1.SetActive(false);
         }
         else if (lifeCount == 2)
         {
-            Heart3.SetActive(false);
+            heart3.SetActive(false);
             SpawnBall();
         }
         else if (lifeCount == 1)
         {
-            Heart2.SetActive(false);
+            heart2.SetActive(false);
             SpawnBall();
         }
     }
@@ -77,16 +77,16 @@ public class GameManager : MonoBehaviour
         if (lifeCountInverse == 0)
         {
             gameOverScreen.SetActive(true);
-            Heart4.SetActive(false);
+            heart4.SetActive(false);
         }
         else if (lifeCountInverse == 2)
         {
-            Heart6.SetActive(false);
+            heart6.SetActive(false);
             SpawnBall();
         }
         else if (lifeCountInverse == 1)
         {
-            Heart5.SetActive(false);
+            heart5.SetActive(false);
             SpawnBall();
         }
     }
@@ -94,6 +94,6 @@ public class GameManager : MonoBehaviour
     void SpawnBall()
     {
         GameObject newBille = Instantiate(ballPrefab, spawnTransform.position, Quaternion.identity,transform);
-        newBille.GetComponent<Ball>().randomInitialVelocity();
+        newBille.GetComponent<Ball>().RandomInitialVelocity();
     }
 }

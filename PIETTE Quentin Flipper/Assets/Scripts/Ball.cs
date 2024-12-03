@@ -10,10 +10,10 @@ public class Ball : MonoBehaviour
     {
         GameManager.instance.ballCount = GameManager.instance.ballCount + 1;
 
-        randomInitialVelocity();
+        RandomInitialVelocity();
     }
 
-    public void randomInitialVelocity()
+    public void RandomInitialVelocity()
     {
         int rand = Random.Range(0, 2);
         if (rand ==0)
