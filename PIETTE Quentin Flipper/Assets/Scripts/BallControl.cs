@@ -26,7 +26,7 @@ public class BallControl : MonoBehaviour
 
     void Start()
     {
-        joueur.text = "Joueur 1";
+        joueur.text = "Player 1";
         
         ballPrefabRigidbody.useGravity = true;
     }
@@ -94,7 +94,7 @@ public class BallControl : MonoBehaviour
 
         ScoreManager.instance.player1Targeted = true;
        
-        joueur.text = "Joueur 1";
+        joueur.text = "Player 1";
 
         // Désactiver la gravité car nous sommes du côté du joueur 1
         ballPrefabRigidbody.useGravity = true;
@@ -109,7 +109,7 @@ public class BallControl : MonoBehaviour
 
         ScoreManager.instance.player1Targeted = false;
         
-        joueur.text = "Joueur 2";
+        joueur.text = "Player 2";
 
         // Activer la gravité car nous sommes du côté du joueur 2
         ballPrefabRigidbody.useGravity = true;

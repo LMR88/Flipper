@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Score Joueur 2 : '
+  m_text: 'Score Player 2 : '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fdeb92e6072b9d246a4ece19561e6478, type: 2}
   m_sharedMaterial: {fileID: 7514043741616551152, guid: fdeb92e6072b9d246a4ece19561e6478,
@@ -785,7 +785,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Score Joueur 1 : '
+  m_text: 'Score Player 1 : '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fdeb92e6072b9d246a4ece19561e6478, type: 2}
   m_sharedMaterial: {fileID: 7514043741616551152, guid: fdeb92e6072b9d246a4ece19561e6478,
